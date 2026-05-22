@@ -31,3 +31,22 @@ This project utilizes the industry-standard IBM Customer Churn dataset. To bette
 *   **Predictive AI:** Automated machine learning model trained using **Amazon SageMaker**.
 *   **Data Warehouse:** Structured insights stored in **Amazon Redshift**.
 *   **Visualization:** Interactive executive dashboard built on **Power BI / QuickSight**.
+
+*   ## Exploratory Data Analysis (EDA) & Business Insights (SQL via Athena)
+
+Before training the AI models, a comprehensive business analysis was performed using **Amazon Athena** to diagnose the company's retention health. The initial results revealed critical financial leaks:
+
+### 1. Global Retention Health
+*   **Total Active Members Analyzed:** 7,080
+*   **Total Historical Cancellations:** 1,869
+*   **Global Attrition (Churn) Rate:** **26.40%**
+*   *Business Impact:* A churn rate higher than 20% is a critical red flag for health and wellness subscription models, indicating that more than a quarter of the portfolio is leaking out.
+
+### 2. High-Value Attrition Crisis (Membership Tier Analysis)
+By executing granular SQL queries to segment users by tier, a major revenue leak was discovered within the premium segment:
+
+*   **Premium Wellness Plan (High-Tier):** This segment holds the highest churn concentration with a staggering **41.89% Churn Rate** (1,297 cancellations out of 3,096 subscribers). 
+*   **Financial Leak:** This premium leakage represents a direct loss of **$114,300.05 USD per month** ($1.37M USD annualized).
+*   **Basic Care Plan (Low-Tier):** Shows strong stability with only a **7.40% Churn Rate** (113 cancellations).
+*   *Strategic Conclusion:* The attrition issue is product-specific, concentrated in the premium high-cost tier. This justifies deploying an Automated Machine Learning (ML) solution to score each premium user's probability of leaving before they cancel.
+
