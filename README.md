@@ -50,3 +50,16 @@ By executing granular SQL queries to segment users by tier, a major revenue leak
 *   **Basic Care Plan (Low-Tier):** Shows strong stability with only a **7.40% Churn Rate** (113 cancellations).
 *   *Strategic Conclusion:* The attrition issue is product-specific, concentrated in the premium high-cost tier. This justifies deploying an Automated Machine Learning (ML) solution to score each premium user's probability of leaving before they cancel.
 
+## Machine Learning & Predictive Modeling (Python via SageMaker JupyterLab)
+
+An advanced Predictive Analytics solution was deployed within a secure, administrative **Amazon SageMaker** workspace to anticipate customer attrition. A **Random Forest Classifier** was trained directly in a JupyterLab environment, pulling structured features from the AWS Glue Data Catalog.
+
+### Executive Model Performance & Business Metrics
+
+*   **Global Predictive Accuracy:** **77.29%**
+*   **Active Customer Retention (Class 0 - Stay):** 82% Precision / 88% Recall
+*   **At-Risk Customer Detection (Class 1 - Churn):** 59% Precision / 47% Recall
+*   **Dataset Support Evaluation:** 1,409 unseen evaluation records.
+
+### Commercial ROI Valuation
+By successfully anticipating **47% of customer cancellations** within the high-value segments, the business can deploy proactive marketing strategies (e.g., personalized health discounts, concierge check-ins) to mitigate the premium attrition crisis. This predictive capability translates to an estimated **monthly savings of $53,700 USD**, preserving over **$644,000 USD in annualized recurring revenue (ARR)** for the Health & Wellness organization.
