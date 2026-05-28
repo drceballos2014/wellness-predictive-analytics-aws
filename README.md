@@ -63,3 +63,20 @@ An advanced Predictive Analytics solution was deployed within a secure, administ
 
 ### Commercial ROI Valuation
 By successfully anticipating **47% of customer cancellations** within the high-value segments, the business can deploy proactive marketing strategies (e.g., personalized health discounts, concierge check-ins) to mitigate the premium attrition crisis. This predictive capability translates to an estimated **monthly savings of $53,700 USD**, preserving over **$644,000 USD in annualized recurring revenue (ARR)** for the Health & Wellness organization.
+
+## Phase 3: Business Intelligence & Prescriptive Analytics (Power BI)
+A production-grade, 3-page executive dashboard was deployed using a star schema architecture connected directly to the refined data asset.
+
+### 1. Data Architecture & Modeling
+- **Schema**: Star Schema (1:Many relationship) built via Power Query.
+- **Dimension**: `Dim_Customer` (Unique `member_id` as master table).
+- **Fact Table**: `Fact_Subscriptions` (Granular subscription metrics and AI outputs).
+- **Filter Direction**: Single directional flow to maximize performance and avoid ambiguous cross-filtering loops.
+
+### 2. Core DAX Financial Measures
+- **Total Portfolio ARR**: `$5,473,399` (Annualized recurring revenue).
+- **At-Risk ARR (AI Predicted)**: `$1,620,000` (Portioned identified by Random Forest as critical flight risks).
+- **Targeted Realizable Savings**: `$1,273,502` (Factoring the model's verified 78.71% accuracy into financial recovery).
+
+### 3. Prescriptive What-If Simulation
+Implemented a numeric range parameter to simulate retention discounts (0% to 30%) on monthly premiums. At a **15% proactive retention incentive**, the dashboard computes a net **Preserved ARR of $1,080,000**, proving that data-driven retention efforts protect over $1M in annualized revenue after contract margins.
